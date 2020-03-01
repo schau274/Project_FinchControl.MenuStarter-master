@@ -8,13 +8,13 @@ namespace Project_FinchControl
 
     // **************************************************
     //
-    // Title: Finch Control - Menu Starter
-    // Description: Starter solution with the helper methods,
-    //              opening and closing screens, and the menu
+    // Title: Finch Control - Data Recorder & Talent Show
+    // Description: Progrom is able to deisplay the Talent
+    //              Show and Data Recorder application 
     // Application Type: Console
-    // Author: Velis, John
-    // Dated Created: 1/22/2020
-    // Last Modified: 1/25/2020
+    // Author: Andrew Schaub
+    // Dated Created: 2/19/2020
+    // Last Modified: 3/1/2020
     //
     // **************************************************
 
