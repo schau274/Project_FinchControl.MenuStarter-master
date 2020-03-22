@@ -639,31 +639,28 @@ namespace Project_FinchControl
 
             DisplayScreenHeader("Sensors to Monitor");
 
-            monitorQuestion:
-            Console.WriteLine("Sensors to Monitor [left, right or both]:");
-            sensorToMonitor = Console.ReadLine();
+            do
+            {
+                Console.WriteLine("Sensors to Monitor [left, right or both]:");
+                sensorToMonitor = Console.ReadLine();
 
-            if (sensorToMonitor == "left")
-            {
-                Console.WriteLine($"The {sensorToMonitor} sensor will be monitored");
-            }
-            else if (sensorToMonitor == "right")
-            {
-                Console.WriteLine($"The {sensorToMonitor} sensor will be monitored");
-            }
-            else if (sensorToMonitor == "both")
-            {
-                Console.WriteLine($"{sensorToMonitor} sensors will be monitored");
-            }
-            else
-            {
-                Console.WriteLine("Please select one of the following left, right or both" );
-                goto monitorQuestion;
-            }
+                if (!(sensorToMonitor == "right" || sensorToMonitor == "left" || sensorToMonitor == "both")) ;
+                {
+                  
+                }
+            } while (!(sensorToMonitor == "right" || sensorToMonitor == "left" || sensorToMonitor == "both"));
 
-            DisplayMenuPrompt("Light Alarm");
+            Console.WriteLine($"The {sensorToMonitor} sensor will be monitored");
 
-            return sensorToMonitor;
+
+            {
+                Console.WriteLine($"The {sensorToMonitor} sensor(s) will be monitored");
+
+                DisplayMenuPrompt("Light Alarm");
+
+                return sensorToMonitor;
+
+            } 
         }
         static string LightAlarmDisplaySetRangeType()
         {
@@ -671,24 +668,18 @@ namespace Project_FinchControl
 
             DisplayScreenHeader("Range Type");
 
-            rangeQuestion:
-            Console.WriteLine("Range Type [minimum, maximum]:");
-            rangeType = Console.ReadLine();
+            do
+            {
+                Console.WriteLine("Range Type [minimum, maximum]:");
+                rangeType = Console.ReadLine();
 
-            if (rangeType == "minimum")
-            {
-                Console.WriteLine($"You have selected the {rangeType} range");
-            }
-            else if (rangeType == "maximum")
-            {
-                Console.WriteLine($"You have selected the {rangeType} range");
-            }
-            else
-            {
-                Console.WriteLine("Sorry please select the minimum or maximum option");
-                goto rangeQuestion;
-            }
+                if (!(rangeType == "minimum" || rangeType == "maximum")) ;
+                {
+                    
+                }
+            } while (!(rangeType == "minimum" || rangeType == "maximum"));
 
+            Console.WriteLine($"You have selected {rangeType} range");
             DisplayMenuPrompt("Light Alarm");
 
             return rangeType;
@@ -698,6 +689,7 @@ namespace Project_FinchControl
             int minMaxThresholdValue;
             int minMaxTempValue;
             DisplayScreenHeader("Minimum/Maximum Threshold Value");
+
 
             Console.WriteLine($"Left light senor ambient value: {finchRobot.getLeftLightSensor()}");
             Console.WriteLine($"RIght light senor ambient value: {finchRobot.getRightLightSensor()}");
