@@ -6,10 +6,11 @@ namespace Demo_FileIO.Theme
     // **************************************************
     //
     // Title: Demo - File IO Theme
-    // Description: Change the background and foreground colors
+    // Description: Demonstration of using a data file for storing the theme
+    //              with file I/O exception handling
     // Application Type: Console
-    // Author: Andrew Schaub
-    // Dated Created: 4/1/2020
+    // Author: Velis, John
+    // Dated Created: 3/22/2020
     // Last Modified: 
     //
     // **************************************************
@@ -259,7 +260,6 @@ namespace Demo_FileIO.Theme
         /// </summary>
         static void DisplayMenuPrompt(string menuName)
         {
-
             Console.WriteLine();
             Console.WriteLine($"\tPress any key to return to the {menuName} Menu.");
             Console.ReadKey();

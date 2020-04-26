@@ -259,7 +259,6 @@ namespace Demo_FileIO.Theme
         /// </summary>
         static void DisplayMenuPrompt(string menuName)
         {
-
             Console.WriteLine();
             Console.WriteLine($"\tPress any key to return to the {menuName} Menu.");
             Console.ReadKey();
